@@ -1,7 +1,7 @@
 {
   "name": "tutorial-react-graphql-store",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bookstore tutorial with ReactJS, GraphQL and TypeScript",
   "scripts": {
     "dev": "npm run dev:stage1",
     "dev:stage1": "concurrently --raw \"npm run dev:stage1:client\" \"npm run dev:stage1:server\"",
