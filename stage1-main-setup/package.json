@@ -4,9 +4,10 @@
   "description": "",
   "scripts": {
     "dev": "concurrently --raw \"npm run dev:client\" \"npm run dev:server\"",
-    "dev:client": "npm run dev --prefix stage1-main-setup/client",
-    "dev:server": "npm run dev --prefix stage1-main-setup/server",
-    "start": "npm run dev"
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "start": "npm run dev",
+    "postinstall": "npm i --prefix client && npm i --prefix server"
   },
   "author": "",
   "license": "ISC",
