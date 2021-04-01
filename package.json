@@ -7,7 +7,11 @@
     "url": "https://github.com/modularcoder/tutorial-react-graphql-store"
   },
   "scripts": {
-    "dev": "npm run dev:stage1",
+    "dev": "npm run dev:stageDraft",
+    "dev:stageDraft": "concurrently --raw \"npm run dev:stageDraft:client\" \"npm run dev:stageDraft:server\"",
+    "dev:stageDraft:client": "npm run dev --prefix stage-draft/client",
+    "dev:stageDraft:server": "npm run dev --prefix stage-draft/server",
+    "install:stageDraft": "npm install --prefix stage-draft/client && npm install --prefix stage-draft/server",
     "dev:stage1": "concurrently --raw \"npm run dev:stage1:client\" \"npm run dev:stage1:server\"",
     "dev:stage1:client": "npm run dev --prefix stage1-main-setup/client",
     "dev:stage1:server": "npm run dev --prefix stage1-main-setup/server",
