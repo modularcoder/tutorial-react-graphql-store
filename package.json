@@ -1,0 +1,19 @@
+{
+  "name": "tutorial-react-graphql-store",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "npm run dev:stage1",
+    "dev:stage1": "concurrently --raw \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:stage1:client": "npm run dev --prefix stage1-main-setup/client",
+    "dev:stage1:server": "npm run dev --prefix stage1-main-setup/server",
+    "test:stage1": "echo \"Error: no test specified\" && exit 1",
+    "install:stage1": "npm install --prefix stage1-main-setup/client && npm install --prefix stage1-main-setup/server",
+    "install:all": "concurrently --raw \"install:stage1\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  }
+}
