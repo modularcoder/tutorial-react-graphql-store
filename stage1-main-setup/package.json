@@ -4,12 +4,12 @@
   "description": "",
   "scripts": {
     "dev": "concurrently --raw \"npm run dev:client\" \"npm run dev:server\"",
-    "dev:client": "npm run start --prefix client",
-    "dev:server": "npm run dev --prefix server",
-    "test:client": "npm run test --prefix client",
+    "dev:client": "npm run start --prefix stage1-client",
+    "dev:server": "npm run dev --prefix stage1-server",
+    "test:client": "npm run test --prefix stage1-client",
     "test": "concurrently --raw \"npm run test:client\" ",
     "start": "npm run dev",
-    "install:all": "npm i --prefix client && npm i --prefix server",
+    "install:all": "npm i --prefix stage1-client && npm i --prefix stage1-server",
     "postinstall": "npm run install:all"
   },
   "author": "",

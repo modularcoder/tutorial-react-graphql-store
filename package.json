@@ -1,7 +1,7 @@
 {
   "name": "tutorial-react-graphql-store",
   "version": "1.0.0",
-  "description": "Bookstore tutorial with ReactJS, GraphQL and TypeScript",
+  "description": "Bookstore tutorial with ReactJS, TailwindCSS, GraphQL and TypeScript",
   "repository": {
     "type": "git",
     "url": "https://github.com/modularcoder/tutorial-react-graphql-store"
@@ -9,6 +9,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "npm run stage1:dev",
+    "stage1": "npm run stage1:dev",
     "stage1:dev": "npm run dev --prefix stage1-main-setup",
     "stage1:dev:client": "npm run dev:client --prefix stage1-main-setup",
     "stage1:dev:server": "npm run dev:server --prefix stage1-main-setup",
