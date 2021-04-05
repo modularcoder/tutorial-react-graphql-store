@@ -7,18 +7,16 @@
     "url": "https://github.com/modularcoder/tutorial-react-graphql-store"
   },
   "scripts": {
-    "dev": "npm run dev:stageDraft",
-    "dev:stageDraft": "concurrently --raw \"npm run dev:stageDraft:client\" \"npm run dev:stageDraft:server\"",
-    "dev:stageDraft:client": "npm run dev --prefix stage-draft/client",
-    "dev:stageDraft:server": "npm run dev --prefix stage-draft/server",
-    "install:stageDraft": "npm install --prefix stage-draft/client && npm install --prefix stage-draft/server",
-    "dev:stage1": "concurrently --raw \"npm run dev:stage1:client\" \"npm run dev:stage1:server\"",
-    "dev:stage1:client": "npm run dev:client --prefix stage1-main-setup",
-    "dev:stage1:server": "npm run dev:server --prefix stage1-main-setup",
-    "test:stage1": "echo \"Error: no test specified\" && exit 1",
-    "install:stage1": "npm install --prefix stage1-main-setup/client && npm install --prefix stage1-main-setup/server",
-    "install:all": "concurrently --raw \"install:stage1\" ",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "dev": "npm run stage1:dev",
+    "stage1:dev": "npm run dev --prefix stage1-main-setup",
+    "stage1:dev:client": "npm run dev:client --prefix stage1-main-setup",
+    "stage1:dev:server": "npm run dev:server --prefix stage1-main-setup",
+    "stage1:test": "npm run test --prefix stage1-main-setup",
+    "stage1:install": "npm install --prefix stage1-main-setup",
+    "install:all": "concurrently --raw \"npm run stage1:install\" ",
+    "uninstall:all": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' +",
+    "postinstall": "npm run install:all"
   },
   "author": "",
   "license": "ISC",

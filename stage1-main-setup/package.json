@@ -9,8 +9,8 @@
     "test:client": "npm run test --prefix client",
     "test": "concurrently --raw \"npm run test:client\" ",
     "start": "npm run dev",
-    "install": "npm i --prefix client && npm i --prefix server",
-    "postinstall": "npm run install"
+    "install:all": "npm i --prefix client && npm i --prefix server",
+    "postinstall": "npm run install:all"
   },
   "author": "",
   "license": "ISC",
