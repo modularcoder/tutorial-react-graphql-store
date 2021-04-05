@@ -1,5 +1,10 @@
 {
   "editor.formatOnSave": true,
+  "tailwindCSS.includeLanguages": {
+    "javascriptreact": "html",
+    "typescriptreact": "html",
+    "plaintext": "html"
+  },
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -14,5 +19,8 @@
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
+  },
+  "editor.quickSuggestions": {
+    "strings": true
   }
 }
