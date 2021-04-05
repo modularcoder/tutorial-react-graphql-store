@@ -4,8 +4,10 @@
   "description": "",
   "scripts": {
     "dev": "concurrently --raw \"npm run dev:client\" \"npm run dev:server\"",
-    "dev:client": "npm run dev --prefix client",
+    "dev:client": "npm run start --prefix client",
     "dev:server": "npm run dev --prefix server",
+    "test:client": "npm run test --prefix client",
+    "test": "concurrently --raw \"npm run test:client\" ",
     "start": "npm run dev",
     "install": "npm i --prefix client && npm i --prefix server",
     "postinstall": "npm run install"
