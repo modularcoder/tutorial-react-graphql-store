@@ -1,15 +1,15 @@
 {
-  "name": "tutorial-react-graphql-store",
+  "name": "tutorial-react-graphql-store-stage2",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "dev": "concurrently --raw \"npm run dev:client\" \"npm run dev:server\"",
-    "dev:client": "npm run start --prefix stage1-client",
-    "dev:server": "npm run dev --prefix stage1-server",
-    "test:client": "npm run test --prefix stage1-client",
+    "dev:client": "npm run start --prefix stage2-client",
+    "dev:server": "npm run dev --prefix stage2-server",
+    "test:client": "npm run test --prefix stage2-client",
     "test": "concurrently --raw \"npm run test:client\" ",
     "start": "npm run dev",
-    "install:all": "npm i --prefix stage1-client && npm i --prefix stage1-server",
+    "install:all": "npm i --prefix stage2-client && npm i --prefix stage2-server",
     "postinstall": "npm run install:all"
   },
   "author": "",

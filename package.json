@@ -15,7 +15,7 @@
     "stage1:dev:server": "npm run dev:server --prefix stage1-main-setup",
     "stage1:test": "npm run test --prefix stage1-main-setup",
     "stage1:install": "npm install --prefix stage1-main-setup",
-    "stage2": "npm run stage1:dev",
+    "stage2": "npm run stage2:dev",
     "stage2:dev": "npm run dev --prefix stage2-ui-layout",
     "stage2:dev:client": "npm run dev:client --prefix stage2-ui-layout",
     "stage2:dev:server": "npm run dev:server --prefix stage2-ui-layout",

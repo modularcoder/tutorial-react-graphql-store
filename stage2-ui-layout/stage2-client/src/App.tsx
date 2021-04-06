@@ -1,5 +1,8 @@
 import React from 'react'
 
+import AppFooter from './_common/AppFooter/AppFooter'
+import AppHeader from './_common/AppHeader/AppHeader'
+
 function App() {
   return (
     <div
@@ -7,32 +10,24 @@ function App() {
         App
         h-screen
         w-full
+        relative
 
         flex
-        justify-center
-        items-center
         text-white
+        flex-col
 
         bg-gradient-to-br
         from-purple-500
         to-indigo-500
       "
     >
-      <div className="container text-center">
-        <h1 className="text-3xl font-semibold mb-2 text-shadow">
-          Bookstore tutorial with ReactJS, TailwindCSS, GraphQL and TypeScript
-        </h1>
-        <p className="text-white">
-          <span className="text-white text-opacity-70">
-            Created by Gevorg Harutyunyan
-          </span>{' '}
-          [
-          <a href="https://github.com/modularcoder" className="underline">
-            @modularcoder
-          </a>
-          ]
+      <AppHeader />
+      <div className="container mx-auto text-center flex flex-1 p-8 justify-center items-center ">
+        <p className="text-shadow text-xl">
+          Yahoo, you're not ready to move to the next stage!
         </p>
       </div>
+      <AppFooter />
     </div>
   )
 }
