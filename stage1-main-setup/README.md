@@ -36,4 +36,17 @@ The app is build on top of [Create-React-App](https://create-react-app.dev/docs/
 
 Now open the `stage1-main-setup/stage1-client` project, navigate arouund, explore the source files at `src/`, play around.
 
+
+Let's now define the requirements of our project.
+
+- We have list of small book cards on the main page
+- The list of the books is paginated
+- The book has title, description, cover image, price, one or more author, one or more category  
+- On the books list page we can filter books by category
+- When we click through the book card we're opening the book full description page, and can add the book to the cart
+- We have a checkout button
+- In the checkout visitors may see and modify the order
+- To create an order user has to be logged in
+- Logged in users may see all of their previous orders and their statuses: submitted | in progress | delievered | canceled
+
 We're now ready to move to the next stage!
