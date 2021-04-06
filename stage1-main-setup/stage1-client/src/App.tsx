@@ -22,6 +22,16 @@ function App() {
         <h1 className="text-3xl font-semibold mb-2 text-shadow">
           Bookstore tutorial with ReactJS, TailwindCSS, GraphQL and TypeScript
         </h1>
+        <p className="text-white">
+          <span className="text-white text-opacity-70">
+            Created by Gevorg Harutyunyan
+          </span>{' '}
+          [
+          <a href="https://github.com/modularcoder" className="underline">
+            @modularcoder
+          </a>
+          ]
+        </p>
       </div>
     </div>
   )
