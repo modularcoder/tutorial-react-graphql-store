@@ -1,7 +1,7 @@
 {
   "template": "create-react-app-typescript",
   "container": {
-    "port": 80,
+    "port": 8080,
     "node": "14"
   }
 }
