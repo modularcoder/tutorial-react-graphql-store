@@ -18,11 +18,13 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "start": "concurrently --raw \"npm run client:dev\" \"npm run server:dev\"",
+    "start": "npm run dev",
+    "dev": "concurrently --raw \"npm run proxy\" \"npm run client:dev\" \"npm run server:dev\" ",
     "client:dev": "craco start",
     "client:build": "craco build",
     "client:test": "craco test",
     "server:dev": "nodemon",
+    "proxy": "node proxy.js",
     "lint": "npm exec eslint src/"
   },
   "eslintConfig": {
@@ -50,6 +52,8 @@
     "autoprefixer": "^9.8.6",
     "concurrently": "^6.0.1",
     "eslint-plugin-prettier": "^3.3.1",
+    "http-proxy-middleware": "^0.19.1",
+    "node-http-proxy": "^0.2.4",
     "nodemon": "^2.0.7",
     "postcss": "^7.0.35",
     "prettier": "^2.2.1",
