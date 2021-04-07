@@ -1,4 +1,5 @@
 {
+  "template": "node",
   "port": 80,
   "node": "14"
 }
