@@ -1,0 +1,8 @@
+{
+  "watch": ["src/server"],
+  "ext": "ts,json",
+  "ignore": ["src/server/**/*.spec.ts"],
+  "exec": "ts-node-dev  --respawn --debug --project ./tsconfig.server.json ./src/server/index.ts"
+}
+
+
