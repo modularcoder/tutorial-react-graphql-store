@@ -1,49 +1,32 @@
-const { ApolloServer, gql } = require('apollo-server')
+import { merge } from 'lodash'
+import { ApolloServer, makeExecutableSchema } from 'apollo-server'
+import { typeDef as Book, resolvers as bookResolvers } from './Book/Book'
+import { typeDef as Author, resolvers as authorResolvers } from './Author/Author'
+// import {
+//   typeDef as Author,
+//   resolvers as authorResolve rs,
+// } from './author.js';
 
-// A schema is a collection of type definitions (hence "typeDefs")
-// that together define the "shape" of queries that are executed against
-// your data.
-const typeDefs = gql`
-  # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
-
-  # This "Book" type defines the queryable fields for every book in our data source.
-  type Book {
-    title: String
-    author: String
-  }
-
-  # The "Query" type is special: it lists all of the available queries that
-  # clients can execute, along with the return type for each. In this
-  # case, the "books" query returns an array of zero or more Books (defined above).
+// If you had Query fields not associated with a
+// specific type you could put them here
+const Query = `
   type Query {
-    books: [Book]
+    _empty: String
   }
 `
 
-const books = [
-  {
-    title: 'The Awakening',
-    author: 'Kate Chopin',
-  },
-  {
-    title: 'City of Glass',
-    author: 'Paul Auster',
-  },
-]
+const resolversRoot = {}
 
-// Resolvers define the technique for fetching the types defined in the
-// schema. This resolver retrieves books from the "books" array above.
-const resolvers = {
-  Query: {
-    books: () => books,
-  },
-}
-
-// The ApolloServer constructor requires two parameters: your schema
-// definition and your set of resolvers.
-const server = new ApolloServer({ typeDefs, resolvers })
-
-// The `listen` method launches a web server.
-server.listen().then(({ url }: { url: string }) => {
-  console.log(`🚀 Apollo server ready at ${url}`)
+const schema = makeExecutableSchema({
+  typeDefs: [Query, Book, Author],
+  resolvers: merge(resolversRoot, bookResolvers, authorResolvers),
 })
+
+const server = new ApolloServer({ schema })
+
+// normal ApolloServer listen call but url will contain /graphql
+server.listen().then(({ url }: { url: string }) => {
+  console.log(`🚀 Server ready at ${url}`)
+})
+
+export default {}
