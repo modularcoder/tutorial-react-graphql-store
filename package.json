@@ -9,6 +9,12 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "npm run stage1:dev",
+    "stage0": "npm run stage0:dev",
+    "stage0:dev": "npm run dev --prefix stage0-draft",
+    "stage0:dev:client": "npm run dev:client --prefix stage0-draft",
+    "stage0:dev:server": "npm run dev:server --prefix stage0-draft",
+    "stage0:test": "npm run test --prefix stage0-draft",
+    "stage0:install": "npm install --prefix stage0-draft",
     "stage1": "npm run stage1:dev",
     "stage1:dev": "npm run dev --prefix stage1-main-setup",
     "stage1:dev:client": "npm run dev:client --prefix stage1-main-setup",
